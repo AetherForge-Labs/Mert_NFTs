@@ -1,0 +1,31 @@
+{
+  "name": "xcomment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "ts-node scripts/scrape.ts",
+    "get": "ts-node scripts/getAddresses.ts",
+    "generate": "ts-node scripts/generateMerkletree.ts",
+    "check": "ts-node scripts/check.ts",
+    "deploy-letter": "ts-node deploy/LetterFromOlympus.ts",
+    "deploy-fren": "ts-node deploy/MertFren.ts",
+    "mint-letter": "ts-node scripts/mint-letter.ts",
+    "mint-fren": "ts-node scripts/mint-fren.ts"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.13",
+    "@openzeppelin/contracts": "^5.2.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "merkletreejs": "^0.5.1",
+    "needle": "^3.3.1",
+    "papaparse": "^5.5.2"
+  }
+}
