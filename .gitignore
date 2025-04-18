@@ -10,3 +10,4 @@ build
 
 # Typescript
 dist
+typechain_types

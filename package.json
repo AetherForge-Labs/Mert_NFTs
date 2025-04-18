@@ -6,6 +6,7 @@
   "scripts": {
     "scrape": "ts-node scripts/scrape.ts",
     "get": "ts-node scripts/getAddresses.ts",
+    "size": "ts-node deploy/size.ts",
     "generate": "ts-node scripts/generateMerkletree.ts",
     "check": "ts-node scripts/check.ts",
     "deploy-letter": "ts-node deploy/LetterFromOlympus.ts",

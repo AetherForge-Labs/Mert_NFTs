@@ -42,16 +42,22 @@ contract LetterFromOlympus is ERC721, Ownable {
         _owners[tokenId] = msg.sender;
     }
 
-    function AdminMint(uint256 _amount) external onlyOwner {
+    function adminMint(uint256 _amount) external onlyOwner {
         require(_totalSupply + _amount <= maxSupply, "Max supply reached");
         for (uint256 i = 0; i < _amount; i++) {
-            _safeMint(msg.sender, _totalSupply + i);
-            _owners[_totalSupply + i] = msg.sender;
+            _totalSupply++;
+            _safeMint(msg.sender, _totalSupply);
+            _owners[_totalSupply] = msg.sender;
+        }
         }
     }
 
     function updateMerkleRoot(bytes32 _newRoot) external onlyOwner {
         merkleRoot = _newRoot;
+    }
+
+    function updateBaseURI(string memory _newBaseURI) external onlyOwner {
+        baseURI = _newBaseURI;
     }
 
     function tokenURI(
