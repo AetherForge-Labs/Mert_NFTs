@@ -3,8 +3,9 @@ import { isAddress, keccak256 } from "ethers";
 import fs from "fs";
 import path from "path";
 const papa = require("papaparse")
+import {address} from "./store/newAddress"
 
-const parseAddresses = () => new Promise<string[]>((resolve, reject) => {
+export const parseAddresses = () => new Promise<string[]>((resolve, reject) => {
 
     console.log("Parsing addresses...")
 
@@ -29,8 +30,6 @@ const parseAddresses = () => new Promise<string[]>((resolve, reject) => {
     })
 })
 
-parseAddresses()
-
 const saveMerkleTreeData = (root: string, proofs: Map<string, string[]>) => {
     console.log("Saving merkletree data...")
     const merkleData = {
@@ -48,7 +47,8 @@ const saveMerkleTreeData = (root: string, proofs: Map<string, string[]>) => {
 const generateMerkletree = async () => {
     console.log("Starting merkletree generation...")
 
-    const addresses = await parseAddresses()
+    const addresses = address
+    // const addresses = await parseAddresses()
 
     if (!addresses) {
         console.log("Error parsing addresses")
@@ -68,9 +68,9 @@ const generateMerkletree = async () => {
         const proof = tree.getHexProof(leaf)
         proofs.set(leaf, proof)
     }
-
     saveMerkleTreeData(root, proofs);
-
 }
 
+// parseAddresses()
 generateMerkletree()
+
