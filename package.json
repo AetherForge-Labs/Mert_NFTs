@@ -12,7 +12,8 @@
     "deploy-letter": "ts-node deploy/LetterFromOlympus.ts",
     "deploy-fren": "ts-node deploy/MertFren.ts",
     "mint-letter": "ts-node scripts/mint-letter.ts",
-    "mint-fren": "ts-node scripts/mint-fren.ts"
+    "mint-fren": "ts-node scripts/mint-fren.ts",
+    "update-root": "ts-node scripts/updateRoot.ts"
   },
   "license": "ISC",
   "type": "commonjs",

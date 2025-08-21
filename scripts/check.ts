@@ -1,23 +1,23 @@
-import { keccak256 } from "ethers"
-import { MerkleTree } from "merkletreejs"
+import { keccak256 } from "ethers";
+import { MerkleTree } from "merkletreejs";
 
-const proofs = require("./merkletree.json")
+const proofs = require("./store/merkletree.json");
 
 const check = (address: string) => {
-    const leaf = keccak256(address)
-    const proof = proofs.proofs[leaf]
+  const leaf = keccak256(address);
+  const proof = proofs.proofs[leaf];
 
-    if (!proof) {
-        console.log("Address is not whitelisted")
-        return
-    }
+  if (!proof) {
+    console.log("Address is not whitelisted");
+    return;
+  }
 
-    console.log("isWhitelisted verifying this proof", proof)
+  console.log("isWhitelisted verifying this proof", proof);
 
-    const verified = MerkleTree.verify(proof, leaf, proofs.root, keccak256, {
-        sortPairs: true
-    })
-    console.log("verified", verified)
-}
+  const verified = MerkleTree.verify(proof, leaf, proofs.root, keccak256, {
+    sortPairs: true,
+  });
+  console.log("verified", verified);
+};
 
-check("0xb05af453011d7ad68a92b0065ffd9d1277ed2741")
+check("0x5Ff25Ad012E218ba392F713395549A3eE12827fa");

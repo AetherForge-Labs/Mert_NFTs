@@ -1,8 +1,11 @@
 // use this for contract verification
 // constructor root = "0xc963873cd2e63c16d5432bf863f85f2a24ae45f01b1d0aa274ed0660bdafdd5a"
 
-export const root = "0x9ac870cabfd62c58e00003088728740f7bbc06154f069eb90c5b22d9d514362d";
-export const baseURI = "ipfs://bafybeidnkn7mnsdt3bbal52b4iu6b6kttgmbpjxdxrql2vtouanbpu5vgi";
-export const LetterFromOlympus_CA = "0x19B6f6D1df883BF8314Ab6646debCAfbddb83594"
-export const MertFren_CA = "0xe93B931f33f63Ff95cC089d5d575E59E1559efAE"
-export const MonadOneMillion_CA = "0x922dA3512e2BEBBe32bccE59adf7E6759fB8CEA2"
+export const root =
+  "0x1c1e20618fdee1da6f3f3bc890a36560105372b688b54b540dfbd079c9c0f468";
+export const baseURI =
+  "ipfs://bafybeidnkn7mnsdt3bbal52b4iu6b6kttgmbpjxdxrql2vtouanbpu5vgi";
+export const LetterFromOlympus_CA =
+  "0x19B6f6D1df883BF8314Ab6646debCAfbddb83594";
+export const MertFren_CA = "0xe93B931f33f63Ff95cC089d5d575E59E1559efAE";
+export const MonadOneMillion_CA = "0x922dA3512e2BEBBe32bccE59adf7E6759fB8CEA2";
